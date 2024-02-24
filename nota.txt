@@ -1,0 +1,40 @@
+for this project  we will install the following dependencies:
+
+step #1:
+
+execute:
+
+npm init -y
+
+then, execute:
+
+npm i dotenv express bcryptjs cookie-parser jsonwebtoken
+
+also, execute:
+
+npm i nodemon --save-dev
+
+
+//
+
+creation of the server ,routes, login and register
+
+
+the next step is create the routes that will send the archivo cuando entren al sitio web
+
+app.get("/", (req,res)=> res.sendFile(__dirname+ "/pages/login.html"))
+ seleccionamos la respuesta y con .sendFile le ponemos el archivo que queremos enviar
+
+si configuramos la opcion de type: module en el .json jau que colocar esto al principio del index.json
+//Fix para __direname
+import path from 'path';
+import { fileURLToPath } from "url";
+const __direname = path.dirname(fileURLToPath(import.meta.url));
+
+
+vamos a incluir la capacidad de servir el css como archivo statico y asi
+poder ver reflejados los estilos:
+
+
+
+//despues de probar que podemos escuchar los eventos de submit, nos vamos a tener que comunicar con el backend para hacer el registro
